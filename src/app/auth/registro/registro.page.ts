@@ -2,7 +2,7 @@ import { Component, OnInit} from  '@angular/core';
 import { Router } from  "@angular/router";
 import { AutenticadorService } from './../../servicios/autenticador.service';
 import { LoadingController } from '@ionic/angular';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -27,9 +27,13 @@ export class RegistroPage implements OnInit {
   term_form:string = 'terms and conditions';
   signup_form:String = 'Sign up';
   login_form:string = 'Log in';
-  constructor(private  authService:  AutenticadorService, private  router:  Router,public loadingController: LoadingController) { }
+  logins_form:string = 'Log in';
+  constructor(private _translate:TranslateService,private  authService:  AutenticadorService, private  router:  Router,public loadingController: LoadingController) { }
 
   ngOnInit() {
+  }
+  ionViewDidEnter(){
+    this._translate.use(this.language);
   }
   async presentLoading() {
     const loading = await this.loadingController.create({
@@ -59,16 +63,36 @@ export class RegistroPage implements OnInit {
   } 
   changelanguage(){  
     this.language = this.language === 'EN' ? 'ES' : 'EN';
-    this.name_form = this.name_form === 'Name' ? 'Nombre' : 'Name';
-    this.email_form = this.email_form === 'e-mail' ? 'Correo electronico' : 'e-mail';
-    this.confirmemail_form = this.confirmemail_form === 'Confirm e-mail' ? 'Correo electronico' : 'Confirm e-mail';
-    this.password_form = this.password_form === 'Password' ? 'Contraseña' : 'Password';
-    this.confirmpassword_form = this.confirmpassword_form === 'Confirm Password' ? 'Confirmar contraseña' : 'Confirm Password';
-    this.phone_form = this.phone_form === 'Phone' ? 'Telefono' : 'Phone';
-    this.accept_form = this.accept_form === 'I accept the' ? 'Yo acepto los' : 'I accept the';
-    this.term_form = this.term_form === 'terms and conditions' ? 'terminos y condiciones' : 'terms and conditions';
-    this.signup_form = this.signup_form === 'Sign up' ? 'Registro' : 'Sign up';
-    this.login_form = this.login_form === 'Log in' ? 'Iniciar sesion' : 'Log in';
-    
+    this._translate.use(this.language);
+    this._translate.get('name').subscribe ((res: string) => {            
+      this.name_form = res; 
+      });
+    this._translate.get('email').subscribe ((res: string) => {            
+        this.email_form = res; 
+      });
+    this._translate.get('confirmemail').subscribe ((res: string) => {            
+        this.confirmemail_form = res; 
+      });
+    this._translate.get('password').subscribe ((res: string) => {            
+        this.password_form = res; 
+      });
+    this._translate.get('confirmpassword').subscribe ((res: string) => {            
+        this.confirmpassword_form = res; 
+      });
+    this._translate.get('phone').subscribe ((res: string) => {            
+        this.phone_form = res; 
+      });
+    this._translate.get('accept').subscribe ((res: string) => {            
+        this.accept_form = res; 
+      });
+    this._translate.get('term').subscribe ((res: string) => {            
+        this.term_form = res; 
+      });
+    this._translate.get('signup').subscribe ((res: string) => {            
+        this.signup_form = res; 
+      });
+    this._translate.get('login').subscribe ((res: string) => {            
+        this.login_form = res; 
+      });
   }
 }

@@ -1,0 +1,12 @@
+{
+    "name": "Nombre",
+    "email": "Correo electronico",
+    "confirmemail": "Confirmar correo electronico",
+    "password": "Contraseña",
+    "confirmpassword": "Confirmar contraseña",
+    "phone": "Telefono",
+    "accept":"Yo acepto los",
+    "term": "terminos y condiciones",
+    "signup": "Registro",
+    "login": "Iniciar sesion"
+}

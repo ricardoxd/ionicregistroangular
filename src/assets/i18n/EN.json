@@ -1,0 +1,12 @@
+{
+    "name": "Name",
+    "email": "e-mail",
+    "confirmemail": "Confirm e-mail",
+    "password":"Password",
+    "confirmpassword":"Confirm Password",
+    "phone":"Phone",
+    "accept":"I accept the",
+    "term": "terms and conditions",
+    "signup": "Sign up",
+    "login":"Log in"
+}
