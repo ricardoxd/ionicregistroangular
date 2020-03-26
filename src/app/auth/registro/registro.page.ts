@@ -15,7 +15,18 @@ export class RegistroPage implements OnInit {
   eye_type: string = 'eye-off';
   eye_type2: string = 'eye-off';
 
-  languaje: string = 'EN';
+  language: string = 'EN';
+
+  name_form:string = 'Name';
+  email_form:string = 'e-mail';
+  confirmemail_form:string = 'Confirm e-mail';
+  password_form:string = 'Password';
+  confirmpassword_form:string = 'Confirm Password';
+  phone_form:string = 'Phone';
+  accept_form:string = 'I accept the';
+  term_form:string = 'terms and conditions';
+  signup_form:String = 'Sign up';
+  login_form:string = 'Log in';
   constructor(private  authService:  AutenticadorService, private  router:  Router,public loadingController: LoadingController) { }
 
   ngOnInit() {
@@ -46,7 +57,18 @@ export class RegistroPage implements OnInit {
     this.password_type2 = this.password_type2 === 'text' ? 'password' : 'text';
     this.eye_type2 = this.eye_type2 === 'eye-off' ? 'eye' : 'eye-off';
   } 
-  changelanguaje(){  
-    this.languaje = this.languaje === 'EN' ? 'ES' : 'EN';
+  changelanguage(){  
+    this.language = this.language === 'EN' ? 'ES' : 'EN';
+    this.name_form = this.name_form === 'Name' ? 'Nombre' : 'Name';
+    this.email_form = this.email_form === 'e-mail' ? 'Correo electronico' : 'e-mail';
+    this.confirmemail_form = this.confirmemail_form === 'Confirm e-mail' ? 'Correo electronico' : 'Confirm e-mail';
+    this.password_form = this.password_form === 'Password' ? 'Contraseña' : 'Password';
+    this.confirmpassword_form = this.confirmpassword_form === 'Confirm Password' ? 'Confirmar contraseña' : 'Confirm Password';
+    this.phone_form = this.phone_form === 'Phone' ? 'Telefono' : 'Phone';
+    this.accept_form = this.accept_form === 'I accept the' ? 'Yo acepto los' : 'I accept the';
+    this.term_form = this.term_form === 'terms and conditions' ? 'terminos y condiciones' : 'terms and conditions';
+    this.signup_form = this.signup_form === 'Sign up' ? 'Registro' : 'Sign up';
+    this.login_form = this.login_form === 'Log in' ? 'Iniciar sesion' : 'Log in';
+    
   }
 }

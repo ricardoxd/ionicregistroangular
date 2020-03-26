@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Sign up</ion-title>
+    <ion-title class="ion-text-center">{{signup_form}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,59 +20,59 @@
   <form   #form="ngForm" (ngSubmit)="registrar(form)" style="padding: 1em;">
     <ion-item lines="inset">
       <ion-icon name="person" slot="start"></ion-icon>
-      <ion-label position="floating">Name *</ion-label>
+      <ion-label position="floating">{{name_form}} *</ion-label>
       <ion-input ngModel type="text" name="name" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="mail" slot="start"></ion-icon>
-      <ion-label position="floating">e-mail *</ion-label>
+      <ion-label position="floating">{{email_form}} *</ion-label>
       <ion-input ngModel type="email" name="email" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="mail" slot="start"></ion-icon>
-      <ion-label position="floating">Confirm e-mail *</ion-label>
+      <ion-label position="floating">{{confirmemail_form}} *</ion-label>
       <ion-input ngModel type="email" name="connfirmemail" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="lock-closed" slot="start"></ion-icon>
-      <ion-label position="floating">Password *</ion-label>
+      <ion-label position="floating">{{password_form}} *</ion-label>
       <ion-input [type]="password_type"  name="password" [(ngModel)]="password"></ion-input>
-<ion-icon [name]="eye_type" item-right (click)="togglePasswordMode()"  slot="end"></ion-icon>
+      <ion-icon [name]="eye_type" item-right (click)="togglePasswordMode()"  slot="end"></ion-icon>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="lock-closed" slot="start"></ion-icon>
-      <ion-label position="floating">Confirm Password *</ion-label>
+      <ion-label position="floating">{{confirmpassword_form}} *</ion-label>
       <ion-input [type]="password_type2" name="confirmpassword" [(ngModel)]="confirmpassword"></ion-input>
-<ion-icon [name]="eye_type2" item-right (click)="togglePasswordMode2()"  slot="end"></ion-icon>
+      <ion-icon [name]="eye_type2" item-right (click)="togglePasswordMode2()"  slot="end"></ion-icon>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="phone-portrait" slot="start"></ion-icon>
-      <ion-label position="floating">Phone *</ion-label>
+      <ion-label position="floating">{{phone_form}} *</ion-label>
       <ion-input ngModel type="password" name="password" required></ion-input>
     </ion-item>
 
-    <ion-checkbox></ion-checkbox> I accept the <a href="#">terms and conditions</a>
-    
+    <ion-checkbox></ion-checkbox> {{accept_form}} <a href="#">{{term_form}}</a>
+
     <ion-row>
       <ion-col>
         <div class="ion-text-center">
-          <ion-button type="submit" expand="block" ><b>Sign up</b></ion-button>
+          <ion-button type="submit" expand="block" ><b>{{signup_form}}</b></ion-button>
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="ion-text-center"><a href="" class="link">Log in</a></div>
+        <div class="ion-text-center"><a href="" class="link">{{login_form}}</a></div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col >
-        <div class="ion-text-center"><p class="idioma" (click)="changelanguaje()"><b>{{languaje}}</b></p></div>
+        <div class="ion-text-center"><p class="idioma" (click)="changelanguage()"><b>{{language}}</b></p></div>
       </ion-col>
     </ion-row>
   </form>
