@@ -1,0 +1,24 @@
+ion-header{
+    box-shadow: 0px 9px 7px rgba(121, 121, 121, 0.59);
+}
+ion-button{
+    --background: #c1a92f;
+    --color: rgb(0, 0, 0);
+}
+.number{
+    background-color: transparent;
+    color: #848484;
+    margin-left: 6px;
+    padding-left: 2px;
+    margin-right: 4px;
+}
+.alert p{
+    margin: 1em;
+    border: 2px solid #adc0d6;
+    border-left: 5px solid #adc0d6;
+    padding: 1em;
+    text-align: center;
+    background-color: aliceblue;
+}
+.blue{color: #0d5fbb;}
+.red{color:red}

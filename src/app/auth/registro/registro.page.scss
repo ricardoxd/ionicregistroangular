@@ -1,0 +1,25 @@
+ion-item{
+    --background: #ffffff;
+    --color: rgb(83, 80, 80);
+}
+
+ion-button{
+    --background: #c1a92f;
+    --color: rgb(0, 0, 0);
+}
+ion-header{
+    box-shadow: 0px 9px 7px rgba(121, 121, 121, 0.59);
+}
+.idioma{
+    background-color: #c1a92f;
+    width: 3em;
+    height: 3em;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding-top: 15px;
+    color: rgb(0, 0, 0);
+}
+.link{
+    color:red;
+    text-decoration: none;
+}
